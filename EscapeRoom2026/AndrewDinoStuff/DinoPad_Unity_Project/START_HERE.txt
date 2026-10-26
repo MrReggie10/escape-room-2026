@@ -1,0 +1,21 @@
+DINO PAD — FRESH UNITY 6 PROJECT (WINDOWS)
+
+THIS IS A COMPLETE UNITY SOURCE PROJECT, not a Unity .unitypackage.
+
+1) Right-click DinoPad_Unity_Fresh_Project.zip > Extract All.
+2) Open Unity Hub > Projects > Add (or Add project from disk).
+3) Select the extracted DinoPad_Unity_Project FOLDER (it contains Assets, Packages, and ProjectSettings).
+4) Open the project in your installed Unity Editor. It may offer to upgrade from the base Unity 6 project version; accept.
+5) Unity Editor: Edit > Project Settings > Player > Other Settings > API Compatibility Level: .NET Framework.
+6) In Project panel, open Assets/DinoPadGame/Scenes/DinoPadGame.unity.
+7) In Hierarchy, select Dino Pad Game. For Arduino Uno serial: set Port Name = COM5 (if still correct), Baud Rate = 115200, Connect On Start checked.
+8) In Dino Pad Game (Script): Last N Presses = 10, Show Button History checked.
+9) Make sure Arduino Serial Monitor/Plotter are closed, then press Play.
+10) D2 to GND = Jump; D3 to GND = Duck; keyboard Space = Jump, Down = Duck.
+
+If Unity displays an incompatible editor warning, create a NEW 2D project in your installed Unity and copy ONLY the included Assets/DinoPadGame folder into the new project's Assets folder. Then do steps 5-10.
+
+If System.IO.Ports causes errors, switch API Compatibility to .NET Framework (Desktop Mono); Unity WebGL is not supported for Uno USB serial.
+This version includes the Arduino sketch inside Assets/DinoPadGame/Arduino/.
+
+Files contain the updated last-N history gameplay and serial scripts, scene, and original USB protocol. No 3D-print files are needed to run the Unity game.
