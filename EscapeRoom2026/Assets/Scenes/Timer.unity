@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SerialController
-  portName: /dev/cu.usbserial-110
+  portName: COM9
   baudRate: 9600
   messageListener: {fileID: 1254514247}
   reconnectionDelay: 1000
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SerialController
-  portName: /dev/cu.usbmodem1401
+  portName: COM8
   baudRate: 115200
   messageListener: {fileID: 0}
   reconnectionDelay: 1000
