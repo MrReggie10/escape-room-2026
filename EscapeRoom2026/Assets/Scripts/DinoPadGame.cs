@@ -19,7 +19,8 @@ public sealed class DinoPadGame : MonoBehaviour
     [Min(1)] public int goalStep = 50;
 
     [Header("Button Press History")]
-    [Min(1)] [Tooltip("Keep only the latest N new button presses. Change this in the Inspector.")]
+    [Min(1)]
+    [Tooltip("Keep only the latest N new button presses. Change this in the Inspector.")]
     public int lastNPresses = 10;
     [Tooltip("Show the history below the game. It can be scrolled when there are more entries.")]
     public bool showButtonHistory = true;
@@ -286,6 +287,15 @@ public sealed class DinoPadGame : MonoBehaviour
             RememberPress("DUCK", source);
         externalDuckHeld = pressed;
         if (pressed && state == GameState.Ready) StartGame();
+    }
+
+    /// <summary>
+    /// Log a press of an input that has no in-game action (e.g. the LEFT / RIGHT
+    /// pads from the Arduino) so it shows up in the button press history.
+    /// </summary>
+    public void RegisterExtraPress(string button, string source)
+    {
+        RememberPress(button, source);
     }
 
     /// <summary>Record one new press; newest first, retaining only last N.</summary>
